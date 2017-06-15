@@ -22,3 +22,27 @@ app.get('/', (req, res) => {
         }
     });
 });
+
+app.get('/:date', (req, res) => {
+    var dateInput;
+    var re = new RegExp(/\d{8,}/);
+    if (re.test(req.params.date)) {
+        dateInput = moment(req.params.date, 'X');
+    }
+    else {
+        dateInput = moment(req.params.date, 'MMMM D, YYYY');
+    }
+
+    if (dateInput.isValid()) {
+        res.json({
+           unix: dateInput.format('X'),
+           natural: dateInput.format('MMMM D, YYYY')  
+        });
+    }
+    else {
+        res.json({
+            unix: null,
+            natural: null
+        });
+    }
+});
