@@ -6,13 +6,28 @@
     <meta charset="utf-8">
 
     <title>Timestamp Microservice</title>
-    <meta name="description" content="The HTML5 Herald">
+    <meta name="description" content="Timestamp Microservice">
     <meta name="author" content="M. Bazhlekova">
+
+    <link rel="stylesheet" tyoe="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <div class="container">
+        <h1>Timestamp Microservice</h1>
+        <p>The Timestamp Microservice takes in a date in either a natural format (June 17, 2017) or a Unix timestamp (1497675600)
+            and returns the Unix timestamp and natural date if input is valid and null if input if invalid.</p>
+
+        <p><strong>Example input: </strong></p>
+
+        <code>http://localhost:3000/1497675600</code><br/>
+        <code>http://localhost:3000/June%2017,%202017</code>
+
+        <p><strong>Example output</strong></p>
+        <code>{"unix":"1497675600","natural":"June 17, 2017"}</code>
+    </div>
 </body>
 
 </html>

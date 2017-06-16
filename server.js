@@ -23,6 +23,8 @@ app.get('/', (req, res) => {
     });
 });
 
+app.use('/', express.static(path.join(__dirname, '/css')));
+
 app.get('/:date', (req, res) => {
     var dateInput;
     var re = new RegExp(/\d{8,}/);

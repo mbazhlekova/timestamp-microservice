@@ -1,0 +1,22 @@
+body {
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #CDC9C9;
+}
+
+code {
+    padding: 10px;
+    background-color: rgba(152, 251, 152, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 0 auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 50px;
+    background-color: white;
+}
